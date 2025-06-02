@@ -1,0 +1,1266 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raquel Siqueira | Nutricionista Materno-Infantil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3a8469',
+                        secondary: '#f5c7b8',
+                        tertiary: '#f8f5f2',
+                        dark: '#2d3748',
+                        light: '#f7fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #4a5568;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-pattern {
+            background-color: #f8f5f2;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233a8469' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            animation: pulse 2s infinite;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            }
+        }
+        
+        .mobile-menu {
+            display: none;
+        }
+        
+        .nav-link {
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3a8469;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f5c7b8;
+        }
+        
+        .btn-primary {
+            background-color: #3a8469;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(58, 132, 105, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background-color: #2c6a54;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(58, 132, 105, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: rgb(255 28 69);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(245, 199, 184, 0.2);
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgb(250, 130, 152);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(245, 199, 184, 0.3);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #3a8469;
+            box-shadow: 0 0 0 3px rgba(58, 132, 105, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Header e Menu de Navegação -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="font-serif text-2xl">
+                    <span class="text-primary font-semibold">Raquel</span> <span class="text-secondary font-semibold">Siqueira</span>
+                </div>
+                <p class="text-xs ml-3 text-gray-500 hidden md:block border-l pl-3 border-gray-200">Nutricionista Materno-Infantil</p>
+            </div>
+            
+            <!-- Menu Desktop -->
+            <nav class="desktop-menu">
+                <ul class="flex space-x-8">
+                    <li><a href="#inicio" class="nav-link text-dark hover:text-primary transition-colors">Início</a></li>
+                    <li><a href="#sobre" class="nav-link text-dark hover:text-primary transition-colors">Sobre</a></li>
+                    <li><a href="#servicos" class="nav-link text-dark hover:text-primary transition-colors">Serviços</a></li>
+                    <li><a href="#blog" class="nav-link text-dark hover:text-primary transition-colors">Blog</a></li>
+                    <li><a href="#depoimentos" class="nav-link text-dark hover:text-primary transition-colors">Depoimentos</a></li>
+                    <li><a href="#contato" class="nav-link text-dark hover:text-primary transition-colors">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Menu Mobile -->
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-dark focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-white shadow-md">
+                    <ul class="flex flex-col p-4">
+                        <li class="py-3 border-b border-gray-100"><a href="#inicio" class="text-dark hover:text-primary transition-colors">Início</a></li>
+                        <li class="py-3 border-b border-gray-100"><a href="#sobre" class="text-dark hover:text-primary transition-colors">Sobre</a></li>
+                        <li class="py-3 border-b border-gray-100"><a href="#servicos" class="text-dark hover:text-primary transition-colors">Serviços</a></li>
+                        <li class="py-3 border-b border-gray-100"><a href="#blog" class="text-dark hover:text-primary transition-colors">Blog</a></li>
+                        <li class="py-3 border-b border-gray-100"><a href="#depoimentos" class="text-dark hover:text-primary transition-colors">Depoimentos</a></li>
+                        <li class="py-3"><a href="#contato" class="text-dark hover:text-primary transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <style>
+        .text-gray1-600 {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255);
+}
+.text-gray-601 {
+    --tw-text-opacity: 1;
+    color: rgb(255 0 57);
+}
+.text-primary1 {
+    --tw-text-opacity: 1;
+    color: rgb(255 28 69);
+}
+    </style>
+    <section id="inicio" class="pt-32 pb-20 md:pt-40 md:pb-28" style="background-image: url('bloggif_683ce510cc42c.gif'); background-size: cover; background-position: center;">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary1 leading-tight">Nutrição com afeto para o começo da vida!</h1>
+            <p class="text-lg mb-8 text-gray1-600 leading-relaxed">Orientação nutricional especializada para gestantes, lactantes, bebês e crianças pequenas, com base em evidências científicas e muito acolhimento.</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://wa.me/5586994836486" target="_blank" class="btn-primary inline-flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2 text-lg"></i> Agende sua consulta
+                </a>
+                <a href="#blog" class="btn-secondary inline-flex items-center justify-center">
+                    <i class="fas fa-book-open mr-2"></i> Conteúdo educativo
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+            </div>
+    </div>
+    
+    <div class="container mx-auto px-4 mt-16">
+        <div class="bg-white rounded-xl shadow-lg py-8 px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="border-r border-gray-100 last:border-0">
+                <div class="text-primary text-3xl font-bold mb-2">5+</div>
+                <p class="text-gray-601">Anos de experiência</p>
+            </div>
+            <div class="border-r border-gray-100 last:border-0">
+                <div class="text-primary text-3xl font-bold mb-2">300+</div>
+                <p class="text-gray-601">Famílias atendidas</p>
+            </div>
+            <div class="border-r border-gray-100 last:border-0">
+                <div class="text-primary text-3xl font-bold mb-2">100%</div>
+                <p class="text-gray-601">Baseado em evidências</p>
+            </div>
+            <div>
+                <div class="text-primary text-3xl font-bold mb-2">98%</div>
+                <p class="text-gray-601">Satisfação dos clientes</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-primary section-title">Sobre Mim</h2>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">Conheça minha trajetória e abordagem profissional</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+
+
+                <div class="md:w-2/5 mb-12 md:mb-0">
+                    <div class="relative mx-auto w-64 h-64 md:w-80 md:h-80">
+                        <div class="absolute inset-0 rounded-full bg-secondary opacity-20 transform -translate-x-4 -translate-y-4"></div>
+                        <div class="absolute inset-0 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                            <img src="498026637_18509731978030747_1185432298737394441_n.jpg" alt="Rounded Image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                <div class="md:w-3/5 md:pl-16">
+                    <h3 class="font-serif text-3xl font-semibold mb-6 text-primary">Raquel Siqueira</h3>
+                    <p class="mb-6 text-gray-600 leading-relaxed">Sou nutricionista especializada em nutrição materno-infantil, com formação acadêmica sólida e experiência prática no acompanhamento de gestantes, lactantes e crianças em fase de introdução alimentar.</p>
+                    
+                    <p class="mb-8 text-gray-600 leading-relaxed">Meu trabalho é baseado em evidências científicas atualizadas, seguindo os protocolos da Academy of Breastfeeding Medicine e as diretrizes do Ministério da Saúde, sempre com um olhar acolhedor para as necessidades específicas de cada família.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <div class="flex items-start">
+                            <div class="bg-primary rounded-full p-3 mr-4 text-white">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Formação Acadêmica</h4>
+                                <p class="text-sm text-gray-600">Graduação em Nutrição e especialização em Nutrição Materno-Infantil</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary rounded-full p-3 mr-4 text-white">
+                                <i class="fas fa-baby"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Experiência</h4>
+                                <p class="text-sm text-gray-600">Ampla experiência em aleitamento materno e introdução alimentar</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary rounded-full p-3 mr-4 text-white">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Atendimento Acolhedor</h4>
+                                <p class="text-sm text-gray-600">Abordagem humanizada e personalizada para cada família</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary rounded-full p-3 mr-4 text-white">
+                                <i class="fas fa-book-medical"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Baseado em Evidências</h4>
+                                <p class="text-sm text-gray-600">Orientações atualizadas e cientificamente comprovadas</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <a href="#servicos" class="btn-primary inline-flex items-center">
+                            <span>Conheça meus serviços</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos" class="py-20 bg-tertiary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-primary section-title">Serviços</h2>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">Ofereço acompanhamento nutricional personalizado para cada fase da maternidade e desenvolvimento infantil.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="service-card bg-white shadow-md h-full">
+                    <div class="h-24 bg-primary bg-opacity-10 flex items-center justify-center">
+                        <i class="fas fa-female text-primary text-3xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-serif text-xl font-semibold text-gray-800 mb-4">Consultoria para Gestantes</h3>
+                        <p class="text-gray-600 mb-6">Orientação nutricional personalizada para uma gestação saudável, com foco no desenvolvimento do bebê e bem-estar da mãe.</p>
+                        <div class="mt-auto">
+                            <a href="https://wa.me/5586994836486?text=Olá,%20gostaria%20de%20informações%20sobre%20consultoria%20para%20gestantes" target="_blank" class="text-primary hover:text-green-700 font-medium inline-flex items-center">
+                                <span>Saiba mais</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Serviço 2 -->
+                <div class="service-card bg-white shadow-md h-full">
+                    <div class="h-24 bg-primary bg-opacity-10 flex items-center justify-center">
+                        <i class="fas fa-baby-carriage text-primary text-3xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-serif text-xl font-semibold text-gray-800 mb-4">Acompanhamento para Lactantes</h3>
+                        <p class="text-gray-600 mb-6">Suporte nutricional para mães que amamentam, com orientações sobre alimentação adequada e armazenamento de leite materno.</p>
+                        <div class="mt-auto">
+                            <a href="https://wa.me/5586994836486?text=Olá,%20gostaria%20de%20informações%20sobre%20acompanhamento%20para%20lactantes" target="_blank" class="text-primary hover:text-green-700 font-medium inline-flex items-center">
+                                <span>Saiba mais</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Serviço 3 -->
+                <div class="service-card bg-white shadow-md h-full">
+                    <div class="h-24 bg-primary bg-opacity-10 flex items-center justify-center">
+                        <i class="fas fa-utensils text-primary text-3xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-serif text-xl font-semibold text-gray-800 mb-4">Introdução Alimentar</h3>
+                        <p class="text-gray-600 mb-6">Planejamento personalizado para a introdução de alimentos sólidos, com orientações sobre BLW e alimentação complementar.</p>
+                        <div class="mt-auto">
+                            <a href="https://wa.me/5586994836486?text=Olá,%20gostaria%20de%20informações%20sobre%20introdução%20alimentar" target="_blank" class="text-primary hover:text-green-700 font-medium inline-flex items-center">
+                                <span>Saiba mais</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Serviço 4 -->
+                <div class="service-card bg-white shadow-md h-full">
+                    <div class="h-24 bg-primary bg-opacity-10 flex items-center justify-center">
+                        <i class="fas fa-baby text-primary text-3xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-serif text-xl font-semibold text-gray-800 mb-4">Nutrição para Bebês</h3>
+                        <p class="text-gray-600 mb-6">Orientações nutricionais específicas para bebês, com foco no desenvolvimento saudável e prevenção de alergias alimentares.</p>
+                        <div class="mt-auto">
+                            <a href="https://wa.me/5586994836486?text=Olá,%20gostaria%20de%20informações%20sobre%20nutrição%20para%20bebês" target="_blank" class="text-primary hover:text-green-700 font-medium inline-flex items-center">
+                                <span>Saiba mais</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Serviço 5 -->
+                <div class="service-card bg-white shadow-md h-full">
+                    <div class="h-24 bg-primary bg-opacity-10 flex items-center justify-center">
+                        <i class="fas fa-child text-primary text-3xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-serif text-xl font-semibold text-gray-800 mb-4">Nutrição Infantil</h3>
+                        <p class="text-gray-600 mb-6">Acompanhamento nutricional para crianças pequenas, com estratégias para lidar com seletividade alimentar e promover hábitos saudáveis.</p>
+                        <div class="mt-auto">
+                            <a href="https://wa.me/5586994836486?text=Olá,%20gostaria%20de%20informações%20sobre%20nutrição%20infantil" target="_blank" class="text-primary hover:text-green-700 font-medium inline-flex items-center">
+                                <span>Saiba mais</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Serviço 6 -->
+                <div class="service-card bg-white shadow-md h-full">
+                    <div class="h-24 bg-primary bg-opacity-10 flex items-center justify-center">
+                        <i class="fas fa-apple-alt text-primary text-3xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-serif text-xl font-semibold text-gray-800 mb-4">Organização Alimentar</h3>
+                        <p class="text-gray-600 mb-6">Orientações para organização de rotinas alimentares saudáveis para toda a família, com cardápios práticos e nutritivos.</p>
+                        <div class="mt-auto">
+                            <a href="https://wa.me/5586994836486?text=Olá,%20gostaria%20de%20informações%20sobre%20organização%20alimentar" target="_blank" class="text-primary hover:text-green-700 font-medium inline-flex items-center">
+                                <span>Saiba mais</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA -->
+            <div class="mt-16 text-center">
+                <p class="text-gray-600 mb-6">Todos os serviços são personalizados de acordo com as necessidades específicas de cada família.</p>
+                <a href="https://wa.me/5586994836486?text=Olá,%20gostaria%20de%20informações%20sobre%20os%20serviços" target="_blank" class="btn-primary inline-flex items-center">
+                    <i class="fab fa-whatsapp mr-2"></i> Agende uma consulta
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Como Funciona -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-primary section-title">Como Funciona</h2>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">Conheça o passo a passo do meu atendimento personalizado</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Etapa 1 -->
+                <div class="relative">
+                    <div class="bg-tertiary rounded-lg p-8 h-full">
+                        <div class="absolute -top-5 -left-5 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">1</div>
+                        <h3 class="font-serif text-xl font-semibold text-gray-800 mb-4 mt-4">Agendamento</h3>
+                        <p class="text-gray-600">Entre em contato via WhatsApp para agendar sua consulta. Você receberá um questionário inicial para preenchimento.</p>
+                    </div>
+                </div>
+                
+                <!-- Etapa 2 -->
+                <div class="relative">
+                    <div class="bg-tertiary rounded-lg p-8 h-full">
+                        <div class="absolute -top-5 -left-5 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">2</div>
+                        <h3 class="font-serif text-xl font-semibold text-gray-800 mb-4 mt-4">Consulta</h3>
+                        <p class="text-gray-600">Realizamos a consulta personalizada, onde avalio suas necessidades específicas e elaboramos juntos um plano nutricional.</p>
+                    </div>
+                </div>
+                
+                <!-- Etapa 3 -->
+                <div class="relative">
+                    <div class="bg-tertiary rounded-lg p-8 h-full">
+                        <div class="absolute -top-5 -left-5 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">3</div>
+                        <h3 class="font-serif text-xl font-semibold text-gray-800 mb-4 mt-4">Acompanhamento</h3>
+                        <p class="text-gray-600">Você recebe o plano nutricional completo e mantemos contato para ajustes e dúvidas durante todo o processo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Blog -->
+    <section id="blog" class="py-20 bg-tertiary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-primary section-title">Blog</h2>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">Conteúdo educativo baseado em evidências científicas para ajudar no desenvolvimento saudável do seu bebê.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Post 1 -->
+                <div class="blog-card bg-white shadow-md h-full">
+                    <div class="h-48 bg-primary bg-opacity-10 flex items-center justify-center">
+                        <i class="fas fa-baby-carriage text-primary text-5xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <span class="inline-block px-3 py-1 bg-secondary bg-opacity-30 text-primary text-xs rounded-full mb-4">Aleitamento</span>
+                        <h3 class="font-serif text-xl font-semibold text-gray-800 mb-4">Validade do leite ordenhado 🍼</h3>
+                        <p class="text-gray-600 mb-6">Saiba como armazenar corretamente o leite materno e por quanto tempo ele pode ser conservado em diferentes condições.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">Baseado em protocolos da ABM</span>
+                            <button class="text-primary hover:text-green-700 font-medium inline-flex items-center" onclick="openModal('post1')">
+                                <span>Ler mais</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Post 2 -->
+                <div class="blog-card bg-white shadow-md h-full">
+                    <div class="h-48 bg-primary bg-opacity-10 flex items-center justify-center">
+                        <i class="fas fa-candy-cane text-primary text-5xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <span class="inline-block px-3 py-1 bg-secondary bg-opacity-30 text-primary text-xs rounded-full mb-4">Desenvolvimento</span>
+                        <h3 class="font-serif text-xl font-semibold text-gray-800 mb-4">Açúcar precoce x Colo em excesso</h3>
+                        <p class="text-gray-600 mb-6">Por que ainda precisamos falar sobre isso? Entenda os impactos do açúcar na alimentação infantil e mitos sobre o "excesso de colo".</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">Ministério da Saúde</span>
+                            <button class="text-primary hover:text-green-700 font-medium inline-flex items-center" onclick="openModal('post2')">
+                                <span>Ler mais</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Post 3 -->
+                <div class="blog-card bg-white shadow-md h-full">
+                    <div class="h-48 bg-primary bg-opacity-10 flex items-center justify-center">
+                        <i class="fas fa-utensils text-primary text-5xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <span class="inline-block px-3 py-1 bg-secondary bg-opacity-30 text-primary text-xs rounded-full mb-4">Introdução Alimentar</span>
+                        <h3 class="font-serif text-xl font-semibold text-gray-800 mb-4">Como montar um prato saudável para o bebê?</h3>
+                        <p class="text-gray-600 mb-6">Dicas práticas para oferecer refeições nutritivas e balanceadas durante a introdução alimentar do seu bebê.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">Guia alimentar para crianças</span>
+                            <button class="text-primary hover:text-green-700 font-medium inline-flex items-center" onclick="openModal('post3')">
+                                <span>Ler mais</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="btn-secondary inline-flex items-center justify-center">
+                    <span>Ver todos os artigos</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section id="depoimentos" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-primary section-title">Depoimentos</h2>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">Veja o que as famílias que acompanhei têm a dizer sobre meu trabalho.</p>
+            </div>
+            
+            <div class="testimonial-slider relative max-w-5xl mx-auto">
+                <div class="overflow-hidden">
+                    <div class="testimonial-track flex transition-transform duration-500" id="testimonialTrack">
+                        <!-- Depoimento 1 -->
+                        <div class="testimonial-card w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="h-full flex flex-col">
+                                <div class="mb-6">
+                                    <i class="fas fa-quote-left text-primary text-3xl opacity-30"></i>
+                                </div>
+                                <p class="text-gray-600 mb-8 leading-relaxed">A Raquel foi fundamental na nossa jornada de introdução alimentar. Com suas orientações, conseguimos oferecer alimentos variados e nutritivos para nossa filha, que hoje tem uma relação muito saudável com a comida.</p>
+                                <div class="mt-auto flex items-center">
+                                    <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-user text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Ana Paula</h4>
+                                        <p class="text-xs text-gray-500">Mãe da Laura, 2 anos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Depoimento 2 -->
+                        <div class="testimonial-card w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="h-full flex flex-col">
+                                <div class="mb-6">
+                                    <i class="fas fa-quote-left text-primary text-3xl opacity-30"></i>
+                                </div>
+                                <p class="text-gray-600 mb-8 leading-relaxed">Durante minha gestação, tive muitas dúvidas sobre alimentação. A Raquel me orientou com muita paciência e conhecimento, sempre baseada em evidências científicas. Recomendo a todas as gestantes!</p>
+                                <div class="mt-auto flex items-center">
+                                    <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-user text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Carla Mendes</h4>
+                                        <p class="text-xs text-gray-500">Mãe do Pedro, 6 meses</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Depoimento 3 -->
+                        <div class="testimonial-card w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="h-full flex flex-col">
+                                <div class="mb-6">
+                                    <i class="fas fa-quote-left text-primary text-3xl opacity-30"></i>
+                                </div>
+                                <p class="text-gray-600 mb-8 leading-relaxed">Meu filho era muito seletivo com alimentos. Com as estratégias da Raquel, conseguimos ampliar o cardápio dele de forma gradual e respeitosa. Hoje ele experimenta alimentos que antes recusava!</p>
+                                <div class="mt-auto flex items-center">
+                                    <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-user text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Marcela Silva</h4>
+                                        <p class="text-xs text-gray-500">Mãe do Lucas, 3 anos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="prevBtn" class="absolute top-1/2 -left-5 transform -translate-y-1/2 bg-white rounded-full w-12 h-12 shadow-md flex items-center justify-center focus:outline-none hover:bg-gray-50 transition-colors">
+                    <i class="fas fa-chevron-left text-primary"></i>
+                </button>
+                
+                <button id="nextBtn" class="absolute top-1/2 -right-5 transform -translate-y-1/2 bg-white rounded-full w-12 h-12 shadow-md flex items-center justify-center focus:outline-none hover:bg-gray-50 transition-colors">
+                    <i class="fas fa-chevron-right text-primary"></i>
+                </button>
+                
+                <div class="flex justify-center mt-10">
+                    <div class="flex space-x-3">
+                        <button class="w-3 h-3 rounded-full bg-primary" onclick="goToSlide(0)"></button>
+                        <button class="w-3 h-3 rounded-full bg-gray-300" onclick="goToSlide(1)"></button>
+                        <button class="w-3 h-3 rounded-full bg-gray-300" onclick="goToSlide(2)"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!----------------------------------------------------------->
+
+    <!-- Galeria de Produtos -->
+    <section id="galeria" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="inline-block mb-4">
+                    <span class="text-primary font-semibold px-4 py-1 bg-blue-50 rounded-full">Nossa Galeria</span>
+                </div>
+               
+                
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+              <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-gray-200 relative">
+                        <img src="498026637_18509731978030747_1185432298737394441_n.jpg" alt="Descrição da Prótese Transfemoral" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent opacity-70 flex items-end">
+                            <div class="p-4 text-white">
+                                <h3 class="font-bold text-lg">Nome da Profissional</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                  <!-- Item 1 -->
+              <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-gray-200 relative">
+                        <img src="498026637_18509731978030747_1185432298737394441_n.jpg" alt="Descrição da Prótese Transfemoral" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent opacity-70 flex items-end">
+                            <div class="p-4 text-white">
+                                <h3 class="font-bold text-lg">Nome da Paciente</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                  <!-- Item 1 -->
+              <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-gray-200 relative">
+                        <img src="498026637_18509731978030747_1185432298737394441_n.jpg" alt="Descrição da Prótese Transfemoral" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent opacity-70 flex items-end">
+                            <div class="p-4 text-white">
+                                <h3 class="font-bold text-lg">Nome da Paciente</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+          
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="btn-primary px-8 py-3 rounded-full font-medium inline-block">Ver Galeria Completa</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!------------------------------------------------------------------->
+
+    <!-- Seção CTA -->
+    <section class="py-16 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mb-6">Pronta para iniciar uma jornada nutricional saudável?</h2>
+                <p class="text-white text-opacity-90 mb-8 text-lg">Agende uma consulta e vamos construir juntas um plano nutricional personalizado para você e sua família.</p>
+                <a href="https://wa.me/5586994836486" target="_blank" class="inline-flex items-center justify-center bg-white text-primary hover:bg-gray-100 font-medium py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl">
+                    <i class="fab fa-whatsapp mr-2 text-lg"></i> Agende sua consulta
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="py-20 bg-tertiary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-primary section-title">Contato</h2>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">Entre em contato para agendar sua consulta ou tirar dúvidas sobre os serviços.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-10 max-w-5xl mx-auto">
+                <div class="md:w-1/2">
+                    <div class="bg-white p-10 rounded-lg shadow-md h-full">
+                        <h3 class="font-serif text-2xl font-semibold text-primary mb-8">Informações de Contato</h3>
+                        
+                        <div class="flex items-start mb-8">
+                            <div class="bg-primary rounded-full p-3 mr-5 text-white">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">WhatsApp</h4>
+                                <p class="text-gray-600">(86) 9.9483-6486</p>
+                                <a href="https://wa.me/5586994836486" target="_blank" class="text-primary hover:text-green-700 text-sm mt-1 inline-block">Enviar mensagem</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-8">
+                            <div class="bg-primary rounded-full p-3 mr-5 text-white">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">E-mail</h4>
+                                <p class="text-gray-600">contato@raquelsiqueira.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-8">
+                            <div class="bg-primary rounded-full p-3 mr-5 text-white">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Instagram</h4>
+                                <p class="text-gray-600">@nutri.raquelsiqueira</p>
+                                <a href="https://instagram.com/nutri.raquelsiqueira" target="_blank" class="text-primary hover:text-green-700 text-sm mt-1 inline-block">Seguir</a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10 border-t border-gray-100 pt-6">
+                            <h4 class="font-semibold text-gray-800 mb-3">Horário de Atendimento</h4>
+                            <p class="text-gray-600">Segunda a Sexta: 8h às 18h</p>
+                            <p class="text-gray-600">Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form id="contactForm" class="bg-white p-10 rounded-lg shadow-md">
+                        <h3 class="font-serif text-2xl font-semibold text-primary mb-8">Envie uma mensagem</h3>
+                        
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 mb-2 font-medium">Nome completo</label>
+                            <input type="text" id="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 mb-2 font-medium">E-mail</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 mb-2 font-medium">Telefone</label>
+                            <input type="tel" id="phone" class="form-input">
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label for="message" class="block text-gray-700 mb-2 font-medium">Mensagem</label>
+                            <textarea id="message" rows="5" class="form-input" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full btn-primary">
+                            Enviar mensagem
+                        </button>
+                        
+                        <p class="text-xs text-gray-500 mt-4 text-center">Este é um formulário de demonstração. Para contato real, utilize o WhatsApp.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-primary section-title">Perguntas Frequentes</h2>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">Respostas para as dúvidas mais comuns sobre nutrição materno-infantil</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-6">
+                    <button class="faq-toggle flex justify-between items-center w-full bg-tertiary p-5 rounded-lg text-left font-medium text-gray-800 hover:bg-gray-100 transition-colors">
+                        <span>Quando devo iniciar a introdução alimentar do meu bebê?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white p-5 border border-gray-100 rounded-b-lg">
+                        <p class="text-gray-600">A Organização Mundial da Saúde e o Ministério da Saúde recomendam que a introdução alimentar seja iniciada aos 6 meses de idade, mantendo o aleitamento materno até os 2 anos ou mais. Nessa idade, o bebê já possui desenvolvimento neurológico e digestivo adequados para receber outros alimentos além do leite materno.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <button class="faq-toggle flex justify-between items-center w-full bg-tertiary p-5 rounded-lg text-left font-medium text-gray-800 hover:bg-gray-100 transition-colors">
+                        <span>Quais alimentos devo evitar oferecer ao meu bebê no primeiro ano?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white p-5 border border-gray-100 rounded-b-lg">
+                        <p class="text-gray-600">No primeiro ano de vida, recomenda-se evitar: açúcar, mel (risco de botulismo infantil), sal em excesso, alimentos ultraprocessados, leite de vaca integral, alimentos com potencial alergênico (consulte um profissional), alimentos duros ou em pedaços que possam causar engasgo, e bebidas açucaradas como sucos industrializados e refrigerantes.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <button class="faq-toggle flex justify-between items-center w-full bg-tertiary p-5 rounded-lg text-left font-medium text-gray-800 hover:bg-gray-100 transition-colors">
+                        <span>Como sei se meu bebê está mamando o suficiente?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white p-5 border border-gray-100 rounded-b-lg">
+                        <p class="text-gray-600">Os principais sinais de que o bebê está recebendo leite materno suficiente são: ganho de peso adequado, 6 a 8 fraldas molhadas por dia, evacuações regulares, bebê alerta e ativo, e mamadas frequentes (8 a 12 vezes em 24 horas para recém-nascidos). Se você tem dúvidas sobre a amamentação, é importante buscar orientação profissional.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <button class="faq-toggle flex justify-between items-center w-full bg-tertiary p-5 rounded-lg text-left font-medium text-gray-800 hover:bg-gray-100 transition-colors">
+                        <span>Como lidar com a seletividade alimentar na infância?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white p-5 border border-gray-100 rounded-b-lg">
+                        <p class="text-gray-600">A seletividade alimentar é comum na infância. Algumas estratégias incluem: oferecer o mesmo alimento de formas diferentes, envolver a criança no preparo das refeições, criar um ambiente tranquilo durante as refeições, ser exemplo comendo alimentos variados, evitar pressionar a criança a comer, e manter uma rotina de horários para as refeições. Cada caso é único e pode necessitar de acompanhamento profissional.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <button class="faq-toggle flex justify-between items-center w-full bg-tertiary p-5 rounded-lg text-left font-medium text-gray-800 hover:bg-gray-100 transition-colors">
+                        <span>Quantas consultas são necessárias para o acompanhamento nutricional?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white p-5 border border-gray-100 rounded-b-lg">
+                        <p class="text-gray-600">O número de consultas varia de acordo com as necessidades individuais. Geralmente, após a primeira consulta, recomendo retornos a cada 15-30 dias inicialmente, espaçando conforme a evolução. Para introdução alimentar, o acompanhamento regular nos primeiros 6 meses é importante. Para gestantes, o ideal é iniciar o acompanhamento no início da gestação com consultas trimestrais ou conforme necessidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-10 md:mb-0 md:w-1/3">
+                    <div class="font-serif text-2xl font-bold mb-6">
+                        <span>Raquel</span> <span class="text-secondary">Siqueira</span>
+                    </div>
+                    <p class="mb-6 max-w-md text-white text-opacity-80 leading-relaxed">Nutricionista materno-infantil especializada em orientações nutricionais para gestantes, lactantes, bebês e crianças pequenas.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/nutri.raquelsiqueira" target="_blank" class="bg-white text-primary hover:bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5586994836486" target="_blank" class="bg-white text-primary hover:bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="bg-white text-primary hover:bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-10 md:w-2/3">
+                    <div>
+                        <h4 class="font-semibold mb-6 text-lg">Links Rápidos</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#inicio" class="text-white text-opacity-80 hover:text-white transition-colors">Início</a></li>
+                            <li><a href="#sobre" class="text-white text-opacity-80 hover:text-white transition-colors">Sobre</a></li>
+                            <li><a href="#servicos" class="text-white text-opacity-80 hover:text-white transition-colors">Serviços</a></li>
+                            <li><a href="#blog" class="text-white text-opacity-80 hover:text-white transition-colors">Blog</a></li>
+                            <li><a href="#contato" class="text-white text-opacity-80 hover:text-white transition-colors">Contato</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-6 text-lg">Serviços</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#servicos" class="text-white text-opacity-80 hover:text-white transition-colors">Consultoria para Gestantes</a></li>
+                            <li><a href="#servicos" class="text-white text-opacity-80 hover:text-white transition-colors">Acompanhamento para Lactantes</a></li>
+                            <li><a href="#servicos" class="text-white text-opacity-80 hover:text-white transition-colors">Introdução Alimentar</a></li>
+                            <li><a href="#servicos" class="text-white text-opacity-80 hover:text-white transition-colors">Nutrição Infantil</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-span-2 md:col-span-1">
+                        <h4 class="font-semibold mb-6 text-lg">Contato</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-phone-alt mr-3"></i>
+                                <span>(86) 9.9483-6486</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-3"></i>
+                                <span>contato@raquelsiqueira.com.br</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-clock mr-3"></i>
+                                <span>Seg-Sex: 8h às 18h</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white border-opacity-20 mt-12 pt-8 text-center">
+                <p class="text-white text-opacity-80">&copy; 2023 Raquel Siqueira - Nutricionista Materno-Infantil. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão de WhatsApp Fixo -->
+    <a href="https://wa.me/5586994836486" target="_blank" class="whatsapp-button bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center transition-colors">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Modais para os posts do blog -->
+    <div id="blogModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-3xl w-full max-h-90vh overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-serif text-2xl font-bold text-primary" id="modalTitle"></h3>
+                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <div id="modalContent" class="prose max-w-none">
+                    <!-- Conteúdo do post será inserido aqui via JavaScript -->
+                </div>
+                
+                <div class="mt-8 flex justify-end">
+                    <button onclick="closeModal()" class="btn-primary">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Menu Mobile Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+        
+        // Smooth Scroll para links de âncora
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Slider de Depoimentos
+        let currentSlide = 0;
+        const track = document.getElementById('testimonialTrack');
+        const slides = track.children;
+        const totalSlides = slides.length;
+        
+        function updateSlider() {
+            const slideWidth = slides[0].offsetWidth;
+            track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+            
+            // Atualizar indicadores
+            document.querySelectorAll('#depoimentos .flex.space-x-3 button').forEach((btn, index) => {
+                if (index === currentSlide) {
+                    btn.classList.remove('bg-gray-300');
+                    btn.classList.add('bg-primary');
+                } else {
+                    btn.classList.remove('bg-primary');
+                    btn.classList.add('bg-gray-300');
+                }
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+        
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+        
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        document.getElementById('prevBtn').addEventListener('click', prevSlide);
+        
+        // Ajustar slider ao redimensionar a janela
+        window.addEventListener('resize', updateSlider);
+        
+        // Inicializar slider
+        updateSlider();
+        
+        // Auto-play do slider (opcional)
+        setInterval(nextSlide, 5000);
+        
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+                
+                // Fechar outros FAQs
+                document.querySelectorAll('.faq-toggle').forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        otherToggle.nextElementSibling.classList.add('hidden');
+                        otherToggle.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+        
+      // Modais para os posts do blog
+const blogPosts = {
+    post1: {
+        title: "Validade do leite ordenhado 🍼",
+        content: `
+            <p class="text-gray-600 leading-relaxed">O leite materno é o alimento ideal para o bebê, e saber como armazená-lo corretamente é fundamental para mães que precisam se ausentar ou que desejam manter um estoque.</p>
+            
+            <h4 class="font-serif text-xl font-bold mt-6 mb-4 text-gray-800">Tempo de validade do leite materno:</h4>
+            
+            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-600">
+                <li><strong>À temperatura ambiente (até 25°C):</strong> até 6 horas</li>
+                <li><strong>Em bolsa térmica com gelo (15°C):</strong> até 24 horas</li>
+                <li><strong>Na geladeira (2-4°C):</strong> até 5 dias</li>
+                <li><strong>No freezer/congelador dentro da geladeira:</strong> 2 semanas</li>
+                <li><strong>No freezer com porta separada da geladeira:</strong> até 3 meses</li>
+                <li><strong>No freezer tipo deep-freezer (-18°C ou menos):</strong> até 6 meses</li>
+            </ul>
+            
+            <h4 class="font-serif text-xl font-bold mt-8 mb-4 text-gray-800">Dicas importantes:</h4>
+            
+            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-600">
+                <li>Sempre lave bem as mãos antes de ordenhar ou manipular o leite materno</li>
+                <li>Use recipientes de vidro com tampa plástica ou sacos próprios para armazenamento de leite materno</li>
+                <li>Identifique o recipiente com data e hora da coleta</li>
+                <li>Armazene em pequenas porções (60-120ml) para evitar desperdício</li>
+                <li>Para descongelar, coloque na geladeira na noite anterior ao uso ou em água morna (nunca fervente)</li>
+                <li>Nunca recongelar o leite materno depois de descongelado</li>
+                <li>Nunca aqueça o leite materno no micro-ondas</li>
+            </ul>
+            
+            <p class="mt-6 text-gray-600 leading-relaxed">Estas recomendações seguem os protocolos da Academy of Breastfeeding Medicine (ABM) e do Ministério da Saúde do Brasil.</p>
+            
+            <div class="bg-green-100 p-6 rounded-lg mt-8">
+                <p class="text-gray-700 font-medium">Tem dúvidas específicas sobre armazenamento de leite materno? Agende uma consulta para orientações personalizadas!</p>
+                <a href="https://wa.me/5586994836486" target="_blank" class="text-green-600 hover:text-green-800 font-medium inline-flex items-center mt-2">
+                    <i class="fab fa-whatsapp mr-2"></i> Agendar consulta
+                </a>
+            </div>
+        `
+    },
+    post2: {
+        title: "Açúcar precoce x Colo em excesso",
+        content: `
+            <p class="text-gray-600 leading-relaxed">Dois temas que frequentemente geram dúvidas entre as famílias: o consumo precoce de açúcar e o mito do "excesso de colo". Vamos esclarecer esses pontos com base em evidências científicas.</p>
+            
+            <h4 class="font-serif text-xl font-bold mt-6 mb-4 text-gray-800">Açúcar na alimentação infantil:</h4>
+            
+            <p class="text-gray-600 leading-relaxed">O Ministério da Saúde e a Organização Mundial da Saúde recomendam que crianças menores de 2 anos não consumam açúcar adicionado. Isso porque:</p>
+            
+            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-600">
+                <li>O paladar está em formação e o açúcar pode influenciar preferências alimentares futuras</li>
+                <li>Está associado ao desenvolvimento precoce de cáries dentárias</li>
+                <li>Pode contribuir para o ganho de peso excessivo e obesidade infantil</li>
+                <li>Não oferece benefícios nutricionais e ocupa o lugar de alimentos importantes</li>
+            </ul>
+            
+            <h4 class="font-serif text-xl font-bold mt-8 mb-4 text-gray-800">Mito do "Excesso de Colo":</h4>
+            
+            <p class="text-gray-600 leading-relaxed">Muitos pais ouvem que dar "muito colo" estraga o bebê. No entanto, a ciência e a psicologia infantil desmentem essa ideia:</p>
+            
+            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-600">
+                <li>Bebês precisam de contato físico para se sentir seguros e desenvolverem-se emocionalmente</li>
+                <li>O colo oferece conforto, reduz o estresse e fortalece o vínculo entre pais e filhos</li>
+                <li>Bebês que recebem mais contato tendem a chorar menos e a se tornarem mais seguros no futuro</li>
+                <li>O choro é a principal forma de comunicação do bebê e deve ser atendido</li>
+            </ul>
+            
+            <p class="mt-6 text-gray-600 leading-relaxed">Em resumo, tanto a restrição de açúcar quanto o oferecimento de colo são práticas importantes para o desenvolvimento saudável da criança, baseadas em ciência e não em mitos.</p>
+            
+            <div class="bg-blue-100 p-6 rounded-lg mt-8">
+                <p class="text-gray-700 font-medium">Tem mais dúvidas sobre a alimentação ou o desenvolvimento do seu filho? Agende uma consulta para orientações personalizadas!</p>
+                <a href="https://wa.me/5586994836486" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center mt-2">
+                    <i class="fab fa-whatsapp mr-2"></i> Agendar consulta
+                </a>
+            </div>
+        `
+    }
+    // Adicione mais posts aqui seguindo o mesmo formato
+};
+
+// Seleciona os elementos do DOM
+const blogModal = document.getElementById('blogModal');
+const closeModalBtn = document.getElementById('closeModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalContent = document.getElementById('modalContent');
+const openModalButtons = document.querySelectorAll('.open-modal-btn');
+
+// Função para abrir o modal
+function openModal(postId) {
+    const post = blogPosts[postId];
+    if (post) {
+        modalTitle.textContent = post.title;
+        modalContent.innerHTML = post.content; // Use innerHTML para renderizar o HTML do conteúdo
+        blogModal.classList.remove('hidden'); // Remove a classe 'hidden' para mostrar o modal
+        document.body.classList.add('overflow-hidden'); // Impede rolagem do corpo
+    }
+}
+
+// Função para fechar o modal
+function closeModal() {
+    blogModal.classList.add('hidden'); // Adiciona a classe 'hidden' para esconder o modal
+    document.body.classList.remove('overflow-hidden'); // Permite rolagem do corpo novamente
+}
+
+// Adiciona event listeners aos botões "Ler Mais"
+openModalButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const postId = event.target.dataset.post; // Obtém o 'data-post' do botão clicado
+        openModal(postId);
+    });
+});
+
+// Adiciona event listener ao botão de fechar o modal
+closeModalBtn.addEventListener('click', closeModal);
+
+// Fecha o modal ao clicar fora dele
+blogModal.addEventListener('click', (event) => {
+    if (event.target === blogModal) {
+        closeModal();
+    }
+});
+
+// Fecha o modal ao pressionar a tecla ESC
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !blogModal.classList.contains('hidden')) {
+        closeModal();
+    }
+});
